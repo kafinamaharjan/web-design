@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <form onsubmit="calculate(event )">
+        <div>
+            <label for="firstNumber">First Number</label>
+            <input type="number" id="firstNumber"required />
+        </div>
+        <div>
+            <label for="secondNumber">Second Number</label>
+            <input type="number" id="secondNumber" required/>
+        </div>
+        <div>
+            <label for="operation">OPERATION</label>
+            <select name="" id="operation">
+            <option value="add">ADD</option>
+            <option value="sub">SUBTRACT</option>
+            <option value="mul">MULTIPLY</option>
+            <option value="div">DIVISION</option>
+        </select>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
