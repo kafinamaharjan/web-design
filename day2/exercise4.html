@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+</head>
+<body>
+    <form method="POST" action="/submit-review">
+    <h2>Write a Review</h2>
+    <fieldset>
+      <legend>Product Information</legend>
+        <div>
+      <label>Product Name: </label>
+        <input type="text" name="product_name" value="Sample Product" readonly>
+</div>
+<div>
+      <label for="pro">Product Category:</label>
+        <select name="category" id="pro" required>
+          <option value="" disabled selected>Select Category</option>
+          <option>Electronics</option>
+          <option>Clothing</option>
+          <option>Books</option>
+          <option>Home</option>
+          <option>Sports</option>
+        </select>
+</div>
+<div>
+      <label for="date">Purchase Date:</label>
+        <input type="date" id="date"  required>
+        </div>
+    </fieldset>
+    <fieldset>
+      <legend>Review Details</legend>
+<div>
+      <label for="rate">Overall Rating:</label>
+      <input type="radio" id="rate"name="rating" value="1" required> 1
+      <input type="radio" name="rating" value="2">2
+      <input type="radio" name="rating" value="3"> 3
+      <input type="radio" name="rating" value="4"> 4
+      <input type="radio" name="rating" value="5"> 5
+</div><div>
+      <label for="rev">Review Title:</label>
+        <input type="text" id="rev" minlength="5" maxlength="100" required>
+</div><div>
+      <label for="detailed">Detailed Review:</label><br>
+      <textarea id="detailed" rows="6" minlength="20" maxlength="1000" required></textarea>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Specific Ratings(1–5)</legend>
+      <div>
+      <label for="qua">Quality:</label>
+      <input type="radio" id="qua" name="quality" value="1" required> 1
+      <input type="radio" name="quality" value="2"> 2
+      <input type="radio" name="quality" value="3"> 3
+      <input type="radio" name="quality" value="4"> 4
+      <input type="radio" name="quality" value="5"> 5<br>
+</div>
+<div>
+      <label for="val">Value for Money:</label>
+      <input type="radio" id="val"name="value" value="1" required> 1
+      <input type="radio" name="value" value="2"> 2
+      <input type="radio" name="value" value="3"> 3
+      <input type="radio" name="value" value="4"> 4
+      <input type="radio" name="value" value="5"> 5<br>
+</div>
+<div >
+      <label for="use">Ease of Use:</label>
+      <input type="radio" id="use" name="ease" value="1" required> 1
+      <input type="radio" name="ease" value="2"> 2
+      <input type="radio" name="ease" value="3"> 3
+      <input type="radio" name="ease" value="4"> 4
+      <input type="radio" name="ease" value="5"> 5<br>
+</div>
+      <label for="cus">Customer Service:</label>
+      <input type="radio" id="cus" name="service" value="1" required> 1
+      <input type="radio" name="service" value="2"> 2
+      <input type="radio" name="service" value="3"> 3
+      <input type="radio" name="service" value="4"> 4
+      <input type="radio" name="service" value="5"> 5
+    </fieldset>
+    <fieldset>
+      <legend>Additional Information</legend>
+
+      <label>Would you recommend this product?</label><br>
+      <input type="radio" name="recommend" value="yes" required> Yes
+      <input type="radio" name="recommend" value="no"> No<br>
+
+      <label>Photo Upload:</label><br>
+        <input type="file" name="photos" accept="image/*" multiple><br>
+      
+      <label for="name">Your Name:</label>
+        <input type="text" id="name" required><br>
+
+      <label> </label>
+        <input type="checkbox" checked disabled> Verified Purchase
+    </fieldset>
+    <input type="submit" value="Submit Review">
+      <input type="button" value="Save as Draft">
+      <a href="/">Cancel</a>
+  </form>
+
+</body>
+</html>

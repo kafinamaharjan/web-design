@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Feedback Form</title>
+</head>
+<body>
+    <form method="POST" action="/event-feedback">
+    <h2>Event Feedback Survey</h2>
+    <fieldset>
+      <legend>Event Information</legend>
+
+      <label>Event Name:
+        <input type="text" name="event_name" value="Event 2025" readonly>
+      </label><br>
+
+      <label>Event Date:
+        <input type="date" name="event_date" value="2025-09-19" readonly>
+      </label><br>
+
+      <label>Attendance Type:</label>
+      <input type="radio" id="In-person" name="attendance"  required> In-person
+      <input type="radio" id="Virtual" name="attendance" > Virtual
+      <input type="radio" id="Hybrid" name="attendance" > Hybrid
+    </fieldset>
+    <fieldset>
+      <legend>Overall Experience</legend>
+
+      <label>Satisfaction:</label>
+      <input type="radio" name="satisfaction" value="Very Satisfied" required> Very Satisfied
+      <input type="radio" name="satisfaction" value="Satisfied"> Satisfied
+      <input type="radio" name="satisfaction" value="Neutral"> Neutral
+      <input type="radio" name="satisfaction" value="Dissatisfied"> Dissatisfied
+      <input type="radio" name="satisfaction" value="Very Dissatisfied"> Very Dissatisfied<br>
+
+      <label>Likelihood to Recommend (1–10):</label>
+      <input type="number" name="recommendation" min="1" max="10" required><br>
+
+      <label>Favorite Part(optional):</label><br>
+      <textarea name="favorite_part" rows="3" placeholder="What did you enjoy most?"></textarea>
+    </fieldset>
+    <fieldset>
+      <legend>Detailed Ratings</legend>
+
+      <label>Event Organization:</label>
+      <input type="radio" name="org" value="Excellent" required> Excellent
+      <input type="radio" name="org" value="Good"> Good
+      <input type="radio" name="org" value="Fair"> Fair
+      <input type="radio" name="org" value="Poor"> Poor<br>
+
+      <label>Speaker Quality:</label>
+      <input type="radio" name="speakers" value="Excellent" required> Excellent
+      <input type="radio" name="speakers" value="Good"> Good
+      <input type="radio" name="speakers" value="Fair"> Fair
+      <input type="radio" name="speakers" value="Poor"> Poor<br>
+
+      <label>Venue/Platform:</label>
+      <input type="radio" name="venue" value="Excellent" required> Excellent
+      <input type="radio" name="venue" value="Good"> Good
+      <input type="radio" name="venue" value="Fair"> Fair
+      <input type="radio" name="venue" value="Poor"> Poor<br>
+
+      <label>Content Relevance:</label>
+      <input type="radio" name="content" value="Excellent" required> Excellent
+      <input type="radio" name="content" value="Good"> Good
+      <input type="radio" name="content" value="Fair"> Fair
+      <input type="radio" name="content" value="Poor"> Poor<br>
+
+      <label>Networking Opportunities:</label>
+      <input type="radio" name="networking" value="Excellent" required> Excellent
+      <input type="radio" name="networking" value="Good"> Good
+      <input type="radio" name="networking" value="Fair"> Fair
+      <input type="radio" name="networking" value="Poor"> Poor
+    </fieldset>
+    <fieldset>
+      <legend>Improvement Suggestions</legend>
+
+      <label>What could be improved? (optional)</label><br>
+      <textarea name="improvement" rows="4"></textarea><br>
+
+      <label>Topics for future events:</label>
+      <input type="checkbox" name="topics" value="AI"> AI
+      <input type="checkbox" name="topics" value="Web Development"> Web Development
+      <input type="checkbox" name="topics" value="Cybersecurity"> Cybersecurity
+      <input type="checkbox" name="topics" value="Blockchain"> Blockchain
+      <input type="checkbox" name="topics" value="Cloud"> Cloud
+      <input type="checkbox" name="topics" value="Data Science"> Data Science
+      <input type="checkbox" name="topics" value="Design"> Design
+      <input type="checkbox" name="topics" value="Leadership"> Leadership<br>
+
+      <label>Preferred Format:</label>
+      <input type="radio" name="format" value="Half-day" required> Half-day
+      <input type="radio" name="format" value="Full-day"> Full-day
+      <input type="radio" name="format" value="Multi-day"> Multi-day
+      <input type="radio" name="format" value="Workshop"> Workshop
+    </fieldset>
+    <fieldset>
+      <legend>Contact Information (Optional)</legend>
+
+      <label>Name:</label>
+        <input type="text" name="contact_name">
+      <br>
+
+      <label>Email:</label>
+        <input type="email" name="contact_email">
+      <br>
+
+      <label>Job Title:</label>
+        <input type="text" name="job_title">
+      <br>
+
+      <label>Company:</label>
+        <input type="text" name="company">
+      <br>
+
+        <input type="checkbox" name="follow_up"> I agree to be contacted for follow-up
+    </fieldset>
+    <input type="submit" value="Submit Feedback">
+</form>
+</body>
+</html>

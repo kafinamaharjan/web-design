@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <form method="post" action="/login">
+        <fieldset>
+            <h2>Login to Your Account</h2>
+            <div>
+                <label for="username">Username/Email</label><br>
+                <input type="text" id="username" placeholder="Enter Username or Email" maxlength="100" required>
+            </div>
+            <div>
+                <label for="password" >Password </label><br>
+                <input type="password" id="password" placeholder="Enter your password" minlength="6" required title="Password must be at least 6 characters long">
+            </div>
+            <div>
+                <label for="rem">Remember me always</label>
+                <input type="checkbox" id="rem">
+            </div>
+            <div>
+                <button>
+                    <a href="/forgot_password">Forgot Password?</a>
+                </button>
+            </div>
+            <div>
+                <input type="Submit" value="Login">
+            </div>
+        </fieldset>
+    </form>
+    <p>Don't have an account?<a href="/create_account">Create Account</a></p>
+</body>
+</html>

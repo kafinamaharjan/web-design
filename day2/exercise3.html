@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+</head>
+<body>
+    <h2>Create Your Account</h2>
+    <form method="post" action="/register">
+        <!-- <h2>Create Your Account</h2> -->
+         <fieldset>
+            <legend>Account Information</legend>
+            <div>
+                <label for="user">Username</label>
+                <input type="text" id="user" placeholder="Your username" minlength="4" maxlength="20" accept="alphanumeric" required>
+            </div>
+            <div>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Your Email Address" required>
+                <div>
+                <label for="confirm-email">Confirm Email Address</label>
+                <input type="email" id="confirm-email" placeholder="Confirm Email Address" required>
+                </div>
+            </div>
+            <div>
+                <label for="pass">Password</label>
+                <input type="password" id="pass" placeholder="Your Password" minlength="8" required>
+                <div>
+                <label for="confirm-pass">Confirm Password</label>
+                <input type="password" id="confirm-pass" placeholder="Confirm Password" required>
+                </div>
+            </div>
+         </fieldset>
+         <fieldset>
+            <legend>Personal Details</legend>
+            <div>
+                <label for="n1">Firstname</label>
+                <input type="text" id="n1" placeholder="Your first name" accept="letters" minlength="2" maxlength="30" required>
+            </div>
+            <div>
+                <label for="n2">Lastname</label>
+                <input type="text" id="n2" placeholder="Your last name" accept="letters" minlength="2" maxlength="30" required>
+            </div>
+            <div>
+                <label for="dob" >Date of Birth</label>
+                <input type="date" id="dob" max="2012-07-09" required>
+            </div>
+            <div>
+                <label>Gender:</label>
+                <input type="radio" name="gender" value="Male" required> Male
+                <input type="radio" name="gender" value="Female"> Female
+                <input type="radio" name="gender" value="Non-binary"> Non-binary
+                <input type="radio" name="gender" value="Prefer not to say"> Prefer not to say
+                <br>
+            </div>
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" placeholder="e.g. +977-9812345678"required >
+            </div>
+         </fieldset>
+         <fieldset>
+            <legend>Address Information</legend>
+            <label>Street Address:
+            <input type="text" name="street" required>
+            </label><br>
+
+            <label>City:
+            <input type="text" name="city" required>
+            </label><br>
+
+            <label for="state">State/Province:</label>
+            <select id="state" name="State" required>
+              <option value="" disabled selected>Select State/Province</option>
+              <option value="Bagmati">Bagmati</option>
+              <option value="Gandaki">Gandaki</option>
+              <option value="lumbini">Lumbini</option>
+              <option value="province 1">Province 1</option>
+              <option value="province 2">Province 2</option>
+              <option value="karnali">Karnali</option>
+              <option value="Sudurpashchim">Sudurpashchim</option>
+            </select><br>
+            <label for="zip">ZIP/Postal Code</label>
+            <input type="text" id="zip" pattern="\d{5,5}(-\d{4,4})?" required><br>
+            <label for="Country">Country</label>
+            <select id="Country" name="Country" required>
+                <option value="" disabled selected>Select Country</option>
+                <option value="Nepal">Nepal</option>
+                <option value="India">India</option>
+                <option value="China">China</option>
+                <option value="Australia">Australia</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Maldives">Maldives</option>
+                <option value="Srilanka">Srilanka</option>
+                <option value="Bhutan">Bhutan</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="japan">Japan</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Preferences</legend>
+            <div>
+            <label for="news">Subscribe to our newsletter  for updates</label>
+            <input type="checkbox" id="news">
+            </div>
+            <div>
+                <label>Account type:</label>
+                <input type="radio" id="personal" name="acc" required >Personal
+                <input type="radio" id="Business" name="acc" >Business
+            </div>
+           <div>
+            <label>Interests:</label>
+            <input type="checkbox" id="tech" name="interest">Technology
+            <input type="checkbox" id="sp" name="ïnterest">Sports
+            <input type="checkbox" id="music" name="ïnterest">Music
+            <input type="checkbox" id="travel" name="ïnterest">Travel
+            <input type="checkbox" id="food" name="ïnterest">Food
+            <input type="checkbox" id="art" name="ïnterest">Art
+           </div>
+        </fieldset>
+        <fieldset>
+            <legend>Final Steps</legend>
+            <label>Profile Picture</label><br>
+            <input type="file" accept="image/*" >
+            <div>
+                <label>Terms and Condition</label><br>
+                <input type="checkbox" required>I agree to all the terms and condition
+            </div>
+        </fieldset>
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear Form">
+    </form>
+</body>
+</html>

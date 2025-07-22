@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<body>
+    <form method="post" action="/contact">
+            <h2>Get in Touch</h2>
+             <fieldset>
+                    <legend>Personal Information Section</legend>
+                    <div>
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" placeholder="Enter your full name" minlength="2" maxlength="50" required>
+                    </div>
+                    <div>
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div>
+                        <label for="phoneno">Phone Number(optional):</label>
+                        <input type="tel" id="phoneno" placeholder="eg:+977-9767475758">
+                    </div>
+                    <div>
+                        <label for="company">Company (optional):</label>
+                        <input type="text" id="company" placeholder="Name of your company">
+                    </div>
+            </fieldset>
+            <fieldset>
+                <legend>Inquiry Details Section</legend>
+                    <div>
+                        <label for="subject">Subject:</label>
+                        <select id="subject" name="subject" required>
+                        <option value="" disabled selected>Select a subject</option>
+                            <option value="general">General Inuqiry</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="sales">Sales Question</option>
+                            <option value="billing">Billing Issue</option>
+                            <option value="other">Others</option>
+                        </select>
+                    </div>
+                    Select your Priority:
+                        <input type="radio" id="Low" name="priority">
+                        <label for="Low">Low</label>
+                    
+                        <input type="radio" id="medium"name="priority">
+                        <label for="medium">Medium</label>
+                    
+                        <input type="radio" id="high" name="priority">
+                        <label for="high">High</label>
+                    
+                        <input type="radio" id="urgent" name="priority">
+                        <label for="urgent">Urgent</label>
+                        <br>
+            
+                    Check down your preffered contact method:
+                        <input type="checkbox" id="email">
+                        <label for="email">Email</label>
+                
+                        <input type="checkbox" id="phone">
+                        <label for="phone">Phone</label>
+                    
+                        <input type="checkbox" id="text">
+                        <label for="text">SMS</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Message Section</legend>
+                    <div>
+                        <label for="Message">Your Message</label><br>
+                        <textarea name="Message" id="100" placeholder="Please write your message here" minlength="10" maxlength="500" rows="5" cols="50" required ></textarea>
+                    </div>
+                    <div>
+                        <label for="info">Upload file</label><br>
+                        <input type="file" id="info" accept=".pdf, .docx, image/*" required>
+                    </div>
+                </section>
+                </fieldset>
+                <label for="101">I aggree to policy</label>
+                <input type="checkbox" id="101" required><br>
+                <input type="submit" value="Send Message">
+                <input type="reset" value="Clear Form">
+    </form>
+</body>
+</html>
